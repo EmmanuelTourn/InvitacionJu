@@ -48,3 +48,48 @@ musicBtn.addEventListener("click", async () => {
     alert("Agregá tu archivo assets/musica.mp3 para activar la música.");
   }
 });
+
+
+
+/* ==================== CARRUSEL ==================== */
+
+const slides = document.querySelectorAll(".carousel-slide");
+const dots = document.querySelectorAll(".carousel-dot");
+const carouselPrev = document.getElementById("carouselPrev");
+const carouselNext = document.getElementById("carouselNext");
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
+  }
+
+  slides.forEach((slide, i) => {
+    slide.classList.toggle("active", i === currentSlide);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentSlide);
+  });
+}
+
+carouselPrev.addEventListener("click", () => {
+  showSlide(currentSlide - 1);
+});
+
+carouselNext.addEventListener("click", () => {
+  showSlide(currentSlide + 1);
+});
+
+dots.forEach((dot, i) => {
+  dot.addEventListener("click", () => {
+    showSlide(i);
+  });
+});
+
+showSlide(0);

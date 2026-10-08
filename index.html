@@ -1,4 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8d7e8">
+  <meta name="description" content="Invitación a la presentación del Trabajo Integrador Final de Juliana Belén Gonzalez.">
+
+  <!-- ==================== TITULO Y FAVICON ==================== -->
+  <title>Juliana Belén Gonzalez — Presentación de Tesis</title>
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+
+  <!-- ==================== FUENTES ==================== -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- ==================== CSS ==================== -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="petals" aria-hidden="true"></div>
+
   <main>
+
+    <!-- ================================================== -->
+    <!-- PORTADA / INICIO -->
+    <!-- ================================================== -->
+
     <section class="hero" id="inicio">
       <div class="honey-drop drop-1"></div>
       <div class="honey-drop drop-2"></div>
@@ -19,68 +49,222 @@
       <button class="enter-btn" id="enterBtn">Abrir invitación <span>↓</span></button>
     </section>
 
+
+
+    <!-- ================================================== -->
+    <!-- FOTO + MENSAJE PERSONAL -->
+    <!-- ================================================== -->
+
     <section class="personal section">
+
+      <!-- FOTO -->
       <div class="photo-placeholder">
-        <span>Poner foto de Juli aca</span>
-        <small>ACAAAAAAAAAAAAAA</small>
+        <img src="assets/pruebaJuli.jpg" alt="Juliana Belén Gonzalez">
       </div>
+
+      <!-- MENSAJE -->
       <div class="personal-copy">
-        <p class="eyebrow">UN MOMENTO ESPECIAL</p>
-        <h2>Llegó el momento.</h2>
+        <p class="eyebrow">UNA INVITACIÓN ESPECIAL</p>
+
+        <h2>Quiero invitarte a compartir este momento.</h2>
+
         <p>
-          Después de tanto esfuerzo, estudio y dedicación,
-          llegó el momento de compartir este logro con las personas que la acompañaron y la quieren.
+          El 27 de noviembre voy a presentar mi Trabajo Integrador Final
+          de la Licenciatura en Ciencias Biológicas en la UNNE.
+        </p>
+
+        <p>
+          Mi tesis se titula “De la caracterización a la valoración:
+          transformación de mieles monoflorales regionales en hidromieles y bombones”.
+        </p>
+
+        <p>
+          Me gustaría mucho que pudieras acompañarme en este día tan especial.
         </p>
       </div>
+
     </section>
 
+
+
+<!-- ==================== CARRUSEL ==================== -->
+
+<div class="carousel">
+
+  <div class="carousel-track">
+
+    <div class="carousel-slide active">
+      <img src="./assets/Carru1.png" alt="Trabajo de Juliana Belén Gonzalez">
+    </div>
+
+    <div class="carousel-slide">
+      <img src="./assets/Carru2.png" alt="Trabajo de Juliana Belén Gonzalez">
+    </div>
+
+    <div class="carousel-slide">
+      <img src="./assets/Carru3.png" alt="Trabajo de Juliana Belén Gonzalez">
+    </div>
+
+    <div class="carousel-slide">
+      <img src="./assets/Carru4.png" alt="Trabajo de Juliana Belén Gonzalez">
+    </div>
+
+  </div>
+
+  <button class="carousel-btn carousel-prev" id="carouselPrev" aria-label="Imagen anterior">
+    ‹
+  </button>
+
+  <button class="carousel-btn carousel-next" id="carouselNext" aria-label="Imagen siguiente">
+    ›
+  </button>
+
+  <div class="carousel-dots">
+
+    <button class="carousel-dot active" aria-label="Ir a imagen 1"></button>
+
+    <button class="carousel-dot" aria-label="Ir a imagen 2"></button>
+
+    <button class="carousel-dot" aria-label="Ir a imagen 3"></button>
+
+    <button class="carousel-dot" aria-label="Ir a imagen 4"></button>
+
+
+    <br>
+
+  </div>
+
+</div>
+
+
+    <!-- ================================================== -->
+    <!-- INFORMACION DEL EVENTO / GUARDA LA FECHA -->
+    <!-- ================================================== -->
+
     <section class="details section">
+      <div class="section-number">02</div>
       <p class="eyebrow">LA PRESENTACIÓN</p>
+
       <h2>Guardá la fecha</h2>
 
       <div class="detail-grid">
+
+        <!-- FECHA -->
         <div class="detail">
           <span class="icon">♡</span>
           <small>FECHA</small>
           <strong>27 de noviembre</strong>
           <span>2026</span>
         </div>
+
+        <!-- HORA -->
         <div class="detail">
           <span class="icon">◷</span>
-          <small>HORA</small>
+          <small>HORA</small> 
           <strong>11:00 hs</strong>
           <span> </span>
         </div>
+
+        <!-- LUGAR -->
         <div class="detail">
           <span class="icon">⌖</span>
           <small>LUGAR</small>
           <strong>Campus Universitario UNNE (Av. Libertad 5460)</strong>
           <span>Universidad Nacional del Nordeste</span>
         </div>
+
       </div>
 
+      <!-- GOOGLE MAPS -->
       <a class="map-btn" href="https://maps.app.goo.gl/6DmnyKrBDfcxt3T46" target="_blank" rel="noopener">
         Ver ubicación en Google Maps ↗
       </a>
     </section>
 
+
+
+    <!-- ================================================== -->
+    <!-- CUENTA REGRESIVA -->
+    <!-- ================================================== -->
+
     <section class="countdown section">
       <p class="eyebrow">CUENTA REGRESIVA</p>
       <h2>Falta cada vez menos.</h2>
+
       <div class="timer">
-        <div><strong id="days">00</strong><span>días</span></div>
-        <div><strong id="hours">00</strong><span>horas</span></div>
-        <div><strong id="minutes">00</strong><span>minutos</span></div>
-        <div><strong id="seconds">00</strong><span>segundos</span></div>
+        <div>
+          <strong id="days">00</strong>
+          <span>días</span>
+        </div>
+
+        <div>
+          <strong id="hours">00</strong>
+          <span>horas</span>
+        </div>
+
+        <div>
+          <strong id="minutes">00</strong>
+          <span>minutos</span>
+        </div>
+
+        <div>
+          <strong id="seconds">00</strong>
+          <span>segundos</span>
+        </div>
       </div>
+  
     </section>
 
+
+
+
+    <!-- ================================================== -->
+    <!-- CIERRE / TE ESPERO -->
+    <!-- ================================================== -->
+
     <section class="closing section">
+  
       <div class="honeycomb" aria-hidden="true">
-        <span>✦</span><span>✦</span><span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
+        <span>✦</span>
       </div>
+
       <p class="eyebrow">TE ESPERO</p>
+
       <h2>27 · 11 · 2026</h2>
+
       <p>Campus UNNE · 11 hs aprox.</p>
+
     </section>
+
   </main>
+
+
+
+  <!-- ================================================== -->
+  <!-- BOTON DE MUSICA -->
+  <!-- ================================================== -->
+
+  <button class="music-btn" id="musicBtn" aria-label="Activar música">♫</button>
+
+
+
+  <!-- ================================================== -->
+  <!-- ARCHIVO DE MUSICA -->
+  <!-- ================================================== -->
+
+  <audio id="music" loop>
+    <source src="assets/SUPER JUNIOR 슈퍼주니어 'Mr. Simple' MV.mp3" type="audio/mpeg">
+  </audio>
+
+
+
+  <!-- ================================================== -->
+  <!-- JAVASCRIPT -->
+  <!-- ================================================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>

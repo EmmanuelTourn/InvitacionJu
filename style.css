@@ -202,6 +202,99 @@ h1 span {
   margin-bottom: 18px;
 }
 
+
+/* ==================== CARRUSEL ==================== */
+
+.carousel {
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-track {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  position: relative;
+}
+
+.carousel-slide {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-slide.active {
+  display: flex;
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(100,40,63,.25);
+  border-radius: 50%;
+  background: rgba(255,250,247,.85);
+  color: var(--wine);
+  font-family: "Cormorant Garamond", serif;
+  font-size: 32px;
+  line-height: 1;
+  cursor: pointer;
+  z-index: 2;
+  transition: .3s;
+}
+
+.carousel-btn:hover {
+  background: var(--deep-pink);
+  color: white;
+}
+
+.carousel-prev {
+  left: 15px;
+}
+
+.carousel-next {
+  right: 15px;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.carousel-dot {
+  width: 7px;
+  height: 7px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(100,40,63,.2);
+  cursor: pointer;
+  transition: .3s;
+}
+
+.carousel-dot.active {
+  background: var(--deep-pink);
+  transform: scale(1.3);
+}
+
+
+/* ==================== TESIS ==================== */
+
 .line {
   width: 55px;
   height: 1px;
@@ -234,6 +327,9 @@ h1 span {
   letter-spacing: .08em;
   text-transform: uppercase;
 }
+
+
+/* ==================== INFORMACION DEL EVENTO ==================== */
 
 .details {
   background: white;
@@ -279,6 +375,9 @@ h1 span {
   opacity: .7;
 }
 
+
+/* ==================== CUENTA REGRESIVA ==================== */
+
 .countdown {
   background: #f8d7e8;
 }
@@ -311,6 +410,9 @@ h1 span {
   letter-spacing: .16em;
 }
 
+
+/* ==================== FOTO + MENSAJE ==================== */
+
 .personal {
   display: grid;
   grid-template-columns: .9fr 1.1fr;
@@ -321,26 +423,21 @@ h1 span {
 
 .photo-placeholder {
   aspect-ratio: 4 / 5;
+  overflow: hidden;
   background:
     linear-gradient(145deg, rgba(233,141,181,.3), rgba(201,149,69,.12)),
     repeating-linear-gradient(45deg, rgba(255,255,255,.35) 0 10px, transparent 10px 20px);
   border: 1px solid rgba(185,81,130,.18);
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: var(--deep-pink);
-  text-align: center;
 }
 
-.photo-placeholder span {
-  font: 500 25px "Cormorant Garamond", serif;
-}
-
-.photo-placeholder small {
-  margin-top: 8px;
-  font-size: 9px;
-  max-width: 150px;
+.photo-placeholder img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
 }
 
 .personal-copy .eyebrow {
@@ -361,8 +458,12 @@ h1 span {
   color: var(--deep-pink);
 }
 
+
+/* ==================== CIERRE ==================== */
+
 .closing {
   min-height: 55vh;
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -395,6 +496,9 @@ h1 span {
   font-size: 17px;
 }
 
+
+/* ==================== BOTON DE MUSICA ==================== */
+
 .music-btn {
   position: fixed;
   bottom: 18px;
@@ -410,6 +514,9 @@ h1 span {
   cursor: pointer;
   backdrop-filter: blur(8px);
 }
+
+
+/* ==================== DETALLES DECORATIVOS ==================== */
 
 .honey-drop {
   position: absolute;
@@ -432,7 +539,11 @@ h1 span {
   right: 11%;
 }
 
+
+/* ==================== VERSION MOVIL ==================== */
+
 @media (max-width: 650px) {
+
   .detail-grid {
     grid-template-columns: 1fr;
   }
@@ -459,5 +570,27 @@ h1 span {
     max-width: 330px;
     width: 100%;
     margin: auto;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+
+  .carousel-track {
+    aspect-ratio: 16 / 10;
+  }
+
+  .carousel-btn {
+    width: 36px;
+    height: 36px;
+    font-size: 27px;
+  }
+
+  .carousel-prev {
+    left: 8px;
+  }
+
+  .carousel-next {
+    right: 8px;
   }
 }
