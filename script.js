@@ -35,6 +35,8 @@ document.getElementById("enterBtn").addEventListener("click", () => {
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
 
+music.volume = 0.01;
+
 musicBtn.addEventListener("click", async () => {
   try {
     if (music.paused) {
