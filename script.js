@@ -26,11 +26,46 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
+/* ==================== BRILLOS AL ABRIR LA INVITACION ==================== */
+
+function createSparkles() {
+  const container = document.createElement("div");
+  container.className = "sparkle-container";
+  document.body.appendChild(container);
+
+  const colors = ["", "gold", "white"];
+  const symbols = ["✦", "✧", "✴", "✦"];
+
+  for (let i = 0; i < 65; i++) {
+    const sparkle = document.createElement("span");
+    sparkle.className = "sparkle";
+
+    const color = colors[Math.floor(Math.random() * colors.length)];
+    if (color) {
+      sparkle.classList.add(color);
+    }
+
+    sparkle.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    sparkle.style.left = Math.random() * 100 + "%";
+    sparkle.style.animationDelay = Math.random() * 1.2 + "s";
+    sparkle.style.fontSize = (10 + Math.random() * 16) + "px";
+
+    container.appendChild(sparkle);
+  }
+
+  setTimeout(() => {
+    container.remove();
+  }, 4500);
+}
+
 document.getElementById("enterBtn").addEventListener("click", () => {
+  createSparkles();
+
   document.getElementById("inicio").nextElementSibling.scrollIntoView({
     behavior: "smooth"
   });
 });
+
 
 const music = document.getElementById("music");
 const musicBtn = document.getElementById("musicBtn");
@@ -95,3 +130,4 @@ dots.forEach((dot, i) => {
 });
 
 showSlide(0);
+
